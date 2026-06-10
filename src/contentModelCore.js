@@ -1,9 +1,9 @@
-import enTranslations from "./assets/i18n/en.json";
-import ptBrTranslations from "./assets/i18n/pt-BR.json";
+const enTranslations = require("./assets/i18n/en.json");
+const ptBrTranslations = require("./assets/i18n/pt-BR.json");
 
-export const defaultLocale = "en";
+const defaultLocale = "en";
 
-export const supportedLocales = [
+const supportedLocales = [
   {
     value: "en",
     label: "EN",
@@ -16,16 +16,16 @@ export const supportedLocales = [
   }
 ];
 
-export const splashScreen = {
+const splashScreen = {
   enabled: true,
   duration: 2000
 };
 
-export const illustration = {
+const illustration = {
   animated: true
 };
 
-export const socialMediaLinks = {
+const socialMediaLinks = {
   github: "https://github.com/indiegabo",
   linkedin: "https://www.linkedin.com/in/indiegabo/",
   youtube: "https://www.youtube.com/@OIndieGabo",
@@ -35,24 +35,24 @@ export const socialMediaLinks = {
   display: true
 };
 
-export const openSource = {
+const openSource = {
   showGithubProfile: true,
   display: true
 };
 
-export const twitterDetails = {
+const twitterDetails = {
   userName: "indiegabo",
   display: false
 };
 
-export const isHireable = true;
+const isHireable = true;
 
 const localizedPortfolio = {
   en: enTranslations,
   "pt-BR": ptBrTranslations
 };
 
-export const normalizeLocale = locale => {
+const normalizeLocale = locale => {
   if (!locale) {
     return defaultLocale;
   }
@@ -70,19 +70,19 @@ export const normalizeLocale = locale => {
   return defaultLocale;
 };
 
-export const isSupportedLocale = locale =>
+const isSupportedLocale = locale =>
   Object.prototype.hasOwnProperty.call(
     localizedPortfolio,
     normalizeLocale(locale)
   );
 
-export const getLocalizedContent = locale => {
+const getLocalizedContent = locale => {
   const activeLocale = normalizeLocale(locale);
 
   return localizedPortfolio[activeLocale] || localizedPortfolio[defaultLocale];
 };
 
-export const getResumeFileName = locale =>
+const getResumeFileName = locale =>
   `resume-${normalizeLocale(locale)}.pdf`;
 
 const sanitizePhoneHref = phoneNumber =>
@@ -114,7 +114,7 @@ const getLocalizedOpenSourceProjects = (localizedData, githubProfile) => {
     .filter(Boolean);
 };
 
-export const getResumeData = (locale, options = {}) => {
+const getResumeData = (locale, options = {}) => {
   const activeLocale = normalizeLocale(locale);
   const localizedData = getLocalizedContent(activeLocale);
   const githubProfile = options.githubProfile || null;
@@ -203,4 +203,20 @@ export const getResumeData = (locale, options = {}) => {
           : null
     }
   };
+};
+
+module.exports = {
+  defaultLocale,
+  supportedLocales,
+  splashScreen,
+  illustration,
+  socialMediaLinks,
+  openSource,
+  twitterDetails,
+  isHireable,
+  normalizeLocale,
+  isSupportedLocale,
+  getLocalizedContent,
+  getResumeData,
+  getResumeFileName
 };

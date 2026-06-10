@@ -1,7 +1,5 @@
 import emoji from "react-easy-emoji";
-const contentModel = require("./contentModel");
-
-const {
+import {
   defaultLocale,
   supportedLocales,
   splashScreen,
@@ -15,7 +13,7 @@ const {
   getLocalizedContent,
   getResumeData,
   getResumeFileName
-} = contentModel;
+} from "./contentModel";
 
 export {
   defaultLocale,

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
-const {getResumeData, supportedLocales} = require("../src/contentModel");
+const {getResumeData, supportedLocales} = require("../src/contentModelCore");
 
 const projectRoot = path.resolve(__dirname, "..");
 const buildDir = path.join(projectRoot, "build");
