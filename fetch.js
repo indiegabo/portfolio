@@ -1,31 +1,67 @@
-fs = require("fs");
+const fs = require("fs");
+const path = require("path");
 const https = require("https");
-process = require("process");
-require("dotenv").config();
 
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
-const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA;
-const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
+const baseConfig = require("./site-data.config").default;
 
-const ERR = {
-  noUserName:
-    "Github Username was found to be undefined. Please set all relevant environment variables.",
-  requestFailed:
-    "The request to GitHub didn't succeed. Check if GitHub token in your .env file is correct.",
-  requestFailedMedium:
-    "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
-};
-if (USE_GITHUB_DATA === "true") {
-  if (GITHUB_USERNAME === undefined) {
-    throw new Error(ERR.noUserName);
+const localConfigPath = path.join(__dirname, "site-data.config.local.js");
+const localConfig = fs.existsSync(localConfigPath)
+  ? require(localConfigPath)
+  : {};
+
+function isPlainObject(value) {
+  return Object.prototype.toString.call(value) === "[object Object]";
+}
+
+function mergeConfig(target, source) {
+  if (!isPlainObject(source)) {
+    return target;
   }
 
-  console.log(`Fetching profile data for ${GITHUB_USERNAME}`);
+  return Object.keys(source).reduce(
+    (result, key) => {
+      const currentValue = result[key];
+      const nextValue = source[key];
+
+      if (isPlainObject(currentValue) && isPlainObject(nextValue)) {
+        return {
+          ...result,
+          [key]: mergeConfig(currentValue, nextValue)
+        };
+      }
+
+      return {
+        ...result,
+        [key]: nextValue
+      };
+    },
+    {...target}
+  );
+}
+
+const siteDataConfig = mergeConfig(baseConfig, localConfig);
+const githubConfig = siteDataConfig.github || {};
+const mediumConfig = siteDataConfig.medium || {};
+
+const ERR = {
+  missingGithubConfig:
+    "GitHub sync requires both github.username and github.token in site-data.config.js or site-data.config.local.js.",
+  requestFailed:
+    "The request to GitHub didn't succeed. Check if the GitHub token in your configuration file is correct.",
+  requestFailedMedium:
+    "The request to Medium didn't succeed. Check if Medium username in your configuration file is correct."
+};
+if (githubConfig.enabled) {
+  if (!githubConfig.username || !githubConfig.token) {
+    throw new Error(ERR.missingGithubConfig);
+  }
+
+  console.log(`Fetching profile data for ${githubConfig.username}`);
   var data = JSON.stringify({
     query: `
 {
-  user(login:"${GITHUB_USERNAME}") { 
+  user(login:"${githubConfig.username}") { 
+    id
     name
     bio
     avatarUrl
@@ -62,7 +98,7 @@ if (USE_GITHUB_DATA === "true") {
     port: 443,
     method: "POST",
     headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Authorization: `Bearer ${githubConfig.token}`,
       "User-Agent": "Node"
     }
   };
@@ -94,11 +130,15 @@ if (USE_GITHUB_DATA === "true") {
   req.end();
 }
 
-if (MEDIUM_USERNAME !== undefined) {
-  console.log(`Fetching Medium blogs data for ${MEDIUM_USERNAME}`);
+if (mediumConfig.enabled) {
+  if (!mediumConfig.username) {
+    throw new Error(ERR.requestFailedMedium);
+  }
+
+  console.log(`Fetching Medium blogs data for ${mediumConfig.username}`);
   const options = {
     hostname: "api.rss2json.com",
-    path: `/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`,
+    path: `/v1/api.json?rss_url=https://medium.com/feed/@${mediumConfig.username}`,
     port: 443,
     method: "GET"
   };
@@ -108,7 +148,7 @@ if (MEDIUM_USERNAME !== undefined) {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      throw new Error(ERR.requestFailedMedium);
     }
 
     res.on("data", d => {
