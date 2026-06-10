@@ -8,11 +8,12 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import StyleContext from "../../contexts/StyleContext";
 import {usePortfolio} from "../../hooks/usePortfolio";
+import {getPublicUrl} from "../../utils";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
   const {
-    portfolio: {greeting, ui}
+    portfolio: {greeting, resume, ui}
   } = usePortfolio();
 
   if (!greeting.displayGreeting) {
@@ -46,8 +47,8 @@ export default function Greeting() {
                 {greeting.resumeLink && (
                   <Button
                     text={ui.hero.resumeButton}
-                    newTab={true}
-                    href={greeting.resumeLink}
+                    href={getPublicUrl(resume.fileName)}
+                    download={true}
                   />
                 )}
               </div>
