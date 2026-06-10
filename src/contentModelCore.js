@@ -82,8 +82,7 @@ const getLocalizedContent = locale => {
   return localizedPortfolio[activeLocale] || localizedPortfolio[defaultLocale];
 };
 
-const getResumeFileName = locale =>
-  `resume-${normalizeLocale(locale)}.pdf`;
+const getResumeFileName = locale => `resume-${normalizeLocale(locale)}.pdf`;
 
 const sanitizePhoneHref = phoneNumber =>
   `+${String(phoneNumber || "").replace(/[^\d]/g, "")}`;

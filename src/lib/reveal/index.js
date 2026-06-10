@@ -20,8 +20,16 @@ const resolveDistance = distance => {
 
 const getOffsetTransform = ({left, right, top, bottom, distance}) => {
   const normalizedDistance = resolveDistance(distance);
-  const offsetX = left ? `-${normalizedDistance}` : right ? normalizedDistance : 0;
-  const offsetY = top ? `-${normalizedDistance}` : bottom ? normalizedDistance : 0;
+  const offsetX = left
+    ? `-${normalizedDistance}`
+    : right
+    ? normalizedDistance
+    : 0;
+  const offsetY = top
+    ? `-${normalizedDistance}`
+    : bottom
+    ? normalizedDistance
+    : 0;
 
   return `translate3d(${offsetX}, ${offsetY}, 0)`;
 };
