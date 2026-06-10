@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./Achievement.scss";
 import AchievementCard from "../../components/achievementCard/AchievementCard";
-import {Fade} from "react-reveal";
+import {Fade} from "../../lib/reveal";
 import StyleContext from "../../contexts/StyleContext";
 import {usePortfolio} from "../../hooks/usePortfolio";
 export default function Achievement() {

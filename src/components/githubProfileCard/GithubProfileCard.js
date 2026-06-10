@@ -2,7 +2,7 @@ import React from "react";
 import "./GithubProfileCard.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import emoji from "react-easy-emoji";
-import {Fade} from "react-reveal";
+import {Fade} from "../../lib/reveal";
 import {usePortfolio} from "../../hooks/usePortfolio";
 
 export default function GithubProfileCard({prof}) {

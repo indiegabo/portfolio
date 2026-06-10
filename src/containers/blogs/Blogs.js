@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
-import {Fade} from "react-reveal";
+import {Fade} from "../../lib/reveal";
 import StyleContext from "../../contexts/StyleContext";
 import {usePortfolio} from "../../hooks/usePortfolio";
 import {getPublicUrl} from "../../utils";

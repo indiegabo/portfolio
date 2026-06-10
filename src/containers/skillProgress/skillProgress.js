@@ -1,6 +1,6 @@
 import React from "react";
 import "./Progress.scss";
-import {Fade} from "react-reveal";
+import {Fade} from "../../lib/reveal";
 import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import {usePortfolio} from "../../hooks/usePortfolio";

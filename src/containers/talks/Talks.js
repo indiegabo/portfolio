@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./Talks.scss";
 import TalkCard from "../../components/talkCard/TalkCard";
-import {Fade} from "react-reveal";
+import {Fade} from "../../lib/reveal";
 import StyleContext from "../../contexts/StyleContext";
 import {usePortfolio} from "../../hooks/usePortfolio";
 
