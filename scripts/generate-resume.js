@@ -1,24 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
-const {
-  getResumeData,
-  supportedLocales
-} = require("../src/contentModel");
+const {getResumeData, supportedLocales} = require("../src/contentModel");
 
 const projectRoot = path.resolve(__dirname, "..");
 const buildDir = path.join(projectRoot, "build");
 const publicDir = path.join(projectRoot, "public");
 const templatePath = path.join(__dirname, "resume-template.html");
 const cssPath = path.join(__dirname, "resume-template.css");
-const portraitPath = path.join(
-  projectRoot,
-  "src/assets/images/portrait.jpg"
-);
-const avatarPath = path.join(
-  projectRoot,
-  "src/assets/images/gabo-with-bg.png"
-);
+const portraitPath = path.join(projectRoot, "src/assets/images/portrait.jpg");
+const avatarPath = path.join(projectRoot, "src/assets/images/gabo-with-bg.png");
 const tagPath = path.join(projectRoot, "src/assets/images/tag-indiegabo.png");
 const educationLogoPaths = {
   unifacs: path.join(projectRoot, "src/assets/images/unifacs-logo.png")
@@ -111,9 +102,9 @@ const renderContactItems = resumeData => {
   const portfolioUrl = contact.socialLinks.portfolio;
 
   return [
-    `<li><span>${escapeHtml(
-      resume.labels.location
-    )}</span><strong>${escapeHtml(contact.location)}</strong></li>`,
+    `<li><span>${escapeHtml(resume.labels.location)}</span><strong>${escapeHtml(
+      contact.location
+    )}</strong></li>`,
     `<li><span>${escapeHtml(
       resume.labels.phone
     )}</span><a href="tel:${escapeHtml(contact.phoneHref)}">${escapeHtml(
@@ -142,21 +133,17 @@ const renderExperienceSection = section => {
       <h2>${escapeHtml(section.title)}</h2>
       <div class="timeline-list">
         ${section.items
-          .map(
-            item => {
-              const companyLogoSrc = getMappedAssetSrc(
-                companyLogoPaths,
-                item.companyLogoKey
-              );
+          .map(item => {
+            const companyLogoSrc = getMappedAssetSrc(
+              companyLogoPaths,
+              item.companyLogoKey
+            );
 
-              return `
+            return `
               <article class="timeline-item">
                 <div class="timeline-header">
                   <div class="timeline-headline">
-                    ${renderEntityLogo(
-                      companyLogoSrc,
-                      `${item.company} logo`
-                    )}
+                    ${renderEntityLogo(companyLogoSrc, `${item.company} logo`)}
                     <div>
                       <h3>${escapeHtml(item.role)}</h3>
                       <p class="timeline-subtitle">${escapeHtml(
@@ -176,8 +163,7 @@ const renderExperienceSection = section => {
                 }
               </article>
             `;
-            }
-          )
+          })
           .join("")}
       </div>
     </section>
@@ -194,14 +180,13 @@ const renderEducationSection = section => {
       <h2>${escapeHtml(section.title)}</h2>
       <div class="timeline-list">
         ${section.items
-          .map(
-            item => {
-              const schoolLogoSrc = getMappedAssetSrc(
-                educationLogoPaths,
-                item.logoKey
-              );
+          .map(item => {
+            const schoolLogoSrc = getMappedAssetSrc(
+              educationLogoPaths,
+              item.logoKey
+            );
 
-              return `
+            return `
               <article class="timeline-item compact">
                 <div class="timeline-header">
                   <div class="timeline-headline">
@@ -230,8 +215,7 @@ const renderEducationSection = section => {
                 }
               </article>
             `;
-            }
-          )
+          })
           .join("")}
       </div>
     </section>
@@ -432,17 +416,13 @@ const renderHtml = resumeData => {
     "{{CONTACT_TITLE}}": escapeHtml(resumeData.resume.labels.contact),
     "{{CONTACT_ITEMS}}": renderContactItems(resumeData),
     "{{SKILLS_SECTION}}": renderSkillsSection(sections.skills),
-    "{{PROFICIENCY_SECTION}}": renderProficiencySection(
-      sections.proficiency
-    ),
+    "{{PROFICIENCY_SECTION}}": renderProficiencySection(sections.proficiency),
     "{{EXPERIENCE_SECTION}}": renderExperienceSection(sections.experience),
     "{{EDUCATION_SECTION}}": renderEducationSection(sections.education),
     "{{FEATURED_PROJECTS_SECTION}}": renderProjectSection(
       sections.featuredProjects
     ),
-    "{{ASSET_PROJECTS_SECTION}}": renderProjectSection(
-      sections.assetProjects
-    ),
+    "{{ASSET_PROJECTS_SECTION}}": renderProjectSection(sections.assetProjects),
     "{{OPEN_SOURCE_SECTION}}": renderOpenSourceSection(sections.openSource)
   });
 };

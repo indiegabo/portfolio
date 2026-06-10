@@ -1,1 +1,75 @@
-{"data":{"user":{"name":"Indie Gabo","bio":"Hey! I am a Game and Assets developer using Unity and C#. ","avatarUrl":"https://avatars.githubusercontent.com/u/95456621?u=9015a3f521e2ea9a443d17ed2aae101efa4c9be3&v=4","location":"Salvador, BA - Brazil","pinnedItems":{"totalCount":5,"edges":[{"node":{"name":"sprite-animations","description":"A smooth and intuitive way to work with sprite sheets in Unity.","forkCount":0,"stargazers":{"totalCount":28},"url":"https://github.com/no-slopes/sprite-animations","id":"R_kgDOKeJD8w","diskUsage":19024,"primaryLanguage":{"name":"C#","color":"#178600"}}},{"node":{"name":"handy-fsm","description":"A Handy finite state machine solution for Unity","forkCount":0,"stargazers":{"totalCount":0},"url":"https://github.com/no-slopes/handy-fsm","id":"R_kgDOKlCg1A","diskUsage":6496,"primaryLanguage":{"name":"C#","color":"#178600"}}},{"node":{"name":"ctrl-alt-boo","description":"Apenas minha contribuição ao projeto","forkCount":0,"stargazers":{"totalCount":1},"url":"https://github.com/indiegabo/ctrl-alt-boo","id":"R_kgDOISSs5g","diskUsage":3176,"primaryLanguage":{"name":"ShaderLab","color":"#222c37"}}},{"node":{"name":"parallax-tutorial","description":"Repositório para o tutorial sobre Parallax","forkCount":0,"stargazers":{"totalCount":2},"url":"https://github.com/indiegabo/parallax-tutorial","id":"R_kgDOGzcK4A","diskUsage":169,"primaryLanguage":{"name":"C#","color":"#178600"}}},{"node":{"name":"ryzen-sandbox","description":"This project is a 2D Platformer sandbox created in order to test and study 2D features using Unity. Feel free to fork and test it out.","forkCount":1,"stargazers":{"totalCount":10},"url":"https://github.com/indiegabo/ryzen-sandbox","id":"R_kgDOGiv6Cw","diskUsage":598,"primaryLanguage":{"name":"C#","color":"#178600"}}}]}}}}
+{
+  "data": {
+    "user": {
+      "name": "Indie Gabo",
+      "bio": "Hey! I am a Game and Assets developer using Unity and C#. ",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/95456621?u=9015a3f521e2ea9a443d17ed2aae101efa4c9be3&v=4",
+      "location": "Salvador, BA - Brazil",
+      "pinnedItems": {
+        "totalCount": 5,
+        "edges": [
+          {
+            "node": {
+              "name": "sprite-animations",
+              "description": "A smooth and intuitive way to work with sprite sheets in Unity.",
+              "forkCount": 0,
+              "stargazers": {"totalCount": 28},
+              "url": "https://github.com/no-slopes/sprite-animations",
+              "id": "R_kgDOKeJD8w",
+              "diskUsage": 19024,
+              "primaryLanguage": {"name": "C#", "color": "#178600"}
+            }
+          },
+          {
+            "node": {
+              "name": "handy-fsm",
+              "description": "A Handy finite state machine solution for Unity",
+              "forkCount": 0,
+              "stargazers": {"totalCount": 0},
+              "url": "https://github.com/no-slopes/handy-fsm",
+              "id": "R_kgDOKlCg1A",
+              "diskUsage": 6496,
+              "primaryLanguage": {"name": "C#", "color": "#178600"}
+            }
+          },
+          {
+            "node": {
+              "name": "ctrl-alt-boo",
+              "description": "Apenas minha contribuição ao projeto",
+              "forkCount": 0,
+              "stargazers": {"totalCount": 1},
+              "url": "https://github.com/indiegabo/ctrl-alt-boo",
+              "id": "R_kgDOISSs5g",
+              "diskUsage": 3176,
+              "primaryLanguage": {"name": "ShaderLab", "color": "#222c37"}
+            }
+          },
+          {
+            "node": {
+              "name": "parallax-tutorial",
+              "description": "Repositório para o tutorial sobre Parallax",
+              "forkCount": 0,
+              "stargazers": {"totalCount": 2},
+              "url": "https://github.com/indiegabo/parallax-tutorial",
+              "id": "R_kgDOGzcK4A",
+              "diskUsage": 169,
+              "primaryLanguage": {"name": "C#", "color": "#178600"}
+            }
+          },
+          {
+            "node": {
+              "name": "ryzen-sandbox",
+              "description": "This project is a 2D Platformer sandbox created in order to test and study 2D features using Unity. Feel free to fork and test it out.",
+              "forkCount": 1,
+              "stargazers": {"totalCount": 10},
+              "url": "https://github.com/indiegabo/ryzen-sandbox",
+              "id": "R_kgDOGiv6Cw",
+              "diskUsage": 598,
+              "primaryLanguage": {"name": "C#", "color": "#178600"}
+            }
+          }
+        ]
+      }
+    }
+  }
+}

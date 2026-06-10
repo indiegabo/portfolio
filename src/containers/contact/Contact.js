@@ -37,7 +37,9 @@ export default function Contact() {
                 <>
                   <a
                     className="contact-detail"
-                    href={"tel:" + (contactInfo.phoneHref || contactInfo.number)}
+                    href={
+                      "tel:" + (contactInfo.phoneHref || contactInfo.number)
+                    }
                   >
                     {contactInfo.number}
                   </a>
