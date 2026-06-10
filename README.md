@@ -9,6 +9,16 @@ top of the developerFolio structure.
 2. Start the development server with `npm start`.
 3. Open `http://localhost:3000`.
 
+## Deployment
+
+- Do day-to-day work on `develop`.
+- Merge into `main` when a release is ready.
+- Push `main` to GitHub.
+- The GitHub Actions workflow deploys the `build/` output to `gh-pages`.
+
+To complete the setup in GitHub, configure `Settings > Pages` to publish from
+the `gh-pages` branch root.
+
 ## Data synchronization
 
 The regular development workflow does not require environment variables.
