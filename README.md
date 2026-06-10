@@ -9,6 +9,12 @@ top of the developerFolio structure.
 2. Start the development server with `npm start`.
 3. Open `http://localhost:3000`.
 
+## Build output
+
+- Run `npm run build` to generate the site bundle and the localized resume PDFs.
+- The command emits `build/resume-en.pdf` and `build/resume-pt-BR.pdf`.
+- Run `npm run build:resume` to regenerate only the PDFs.
+
 ## Deployment
 
 - Do day-to-day work on `develop`.

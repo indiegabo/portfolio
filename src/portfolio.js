@@ -9,7 +9,9 @@ import {
   isHireable,
   normalizeLocale,
   isSupportedLocale,
-  getPortfolioData
+  getPortfolioData,
+  getResumeData,
+  getResumeFileName
 } from "./portfolioContent";
 
 const defaultPortfolioData = getPortfolioData(defaultLocale);
@@ -43,6 +45,8 @@ export {
   normalizeLocale,
   isSupportedLocale,
   getPortfolioData,
+  getResumeData,
+  getResumeFileName,
   pageMetadata,
   ui,
   greeting,

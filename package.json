@@ -20,8 +20,11 @@
     "sass": "^1.32.8"
   },
   "scripts": {
+    "prestart": "npm run build:resume",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:site": "react-scripts build",
+    "build:resume": "node scripts/generate-resume.js",
+    "build": "npm run build:site && npm run build:resume",
     "sync-data": "node fetch.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -50,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "puppeteer": "^24.43.1"
   }
 }

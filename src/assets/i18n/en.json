@@ -16,7 +16,7 @@
     },
     "hero": {
       "contactButton": "Contact me",
-      "resumeButton": "See my resume"
+      "resumeButton": "Download my resume"
     },
     "sections": {
       "experience": "Experience",
@@ -44,6 +44,16 @@
       "languageSwitcher": "Select language",
       "themeToggle": "Toggle theme"
     },
+    "resume": {
+      "eyebrow": "Game Developer Resume",
+      "contact": "Contact",
+      "location": "Residence",
+      "phone": "WhatsApp / Phone",
+      "email": "Email",
+      "portfolio": "Portfolio",
+      "highlights": "Highlights",
+      "tools": "Tools"
+    },
     "topButtonTitle": "Go to top"
   },
   "githubContent": {
@@ -60,7 +70,7 @@
     "username": "IndieGabo",
     "title": "Hey, I'm Gabo!",
     "subTitle": "An indie games and assets developer, streamer and speaker from Brazil 🇧🇷.",
-    "resumeLink": "",
+    "resumeLink": "resume-en.pdf",
     "displayGreeting": true
   },
   "skillsSection": {
@@ -327,7 +337,10 @@
   "contactInfo": {
     "title": "Contact Me ☎️",
     "subtitle": "Want to discuss a project or just say hi? My inbox is open.",
-    "number": "+55-71991469251",
+    "fullName": "Gabriel de Souza Leal",
+    "location": "Salvador / BA",
+    "number": "+55 71 9 91469251",
+    "phoneHref": "+5571991469251",
     "email_address": "indiegabodev@gmail.com"
   }
 }

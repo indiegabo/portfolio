@@ -1,51 +1,36 @@
 import emoji from "react-easy-emoji";
-import enTranslations from "./assets/i18n/en.json";
-import ptBrTranslations from "./assets/i18n/pt-BR.json";
+const contentModel = require("./contentModel");
 
-export const defaultLocale = "en";
+const {
+  defaultLocale,
+  supportedLocales,
+  splashScreen,
+  illustration,
+  socialMediaLinks,
+  openSource,
+  twitterDetails,
+  isHireable,
+  normalizeLocale,
+  isSupportedLocale,
+  getLocalizedContent,
+  getResumeData,
+  getResumeFileName
+} = contentModel;
 
-export const supportedLocales = [
-  {
-    value: "en",
-    label: "EN",
-    ariaLabel: "English"
-  },
-  {
-    value: "pt-BR",
-    label: "PT",
-    ariaLabel: "Português do Brasil"
-  }
-];
-
-export const splashScreen = {
-  enabled: true,
-  duration: 2000
+export {
+  defaultLocale,
+  supportedLocales,
+  splashScreen,
+  illustration,
+  socialMediaLinks,
+  openSource,
+  twitterDetails,
+  isHireable,
+  normalizeLocale,
+  isSupportedLocale,
+  getResumeData,
+  getResumeFileName
 };
-
-export const illustration = {
-  animated: true
-};
-
-export const socialMediaLinks = {
-  github: "https://github.com/indiegabo",
-  linkedin: "https://www.linkedin.com/in/indiegabo/",
-  youtube: "https://www.youtube.com/@OIndieGabo",
-  twitch: "https://twitch.tv/indiegabo",
-  gmail: "indiegabodev@gmail.com",
-  display: true
-};
-
-export const openSource = {
-  showGithubProfile: true,
-  display: true
-};
-
-export const twitterDetails = {
-  userName: "indiegabo",
-  display: false
-};
-
-export const isHireable = true;
 
 const educationLogoAssets = {
   unifacs: require("./assets/images/unifacs-logo.png")
@@ -143,33 +128,9 @@ const buildLocalizedPortfolio = translations => ({
 });
 
 const localizedPortfolio = {
-  en: buildLocalizedPortfolio(enTranslations),
-  "pt-BR": buildLocalizedPortfolio(ptBrTranslations)
+  en: buildLocalizedPortfolio(getLocalizedContent("en")),
+  "pt-BR": buildLocalizedPortfolio(getLocalizedContent("pt-BR"))
 };
-
-export const normalizeLocale = locale => {
-  if (!locale) {
-    return defaultLocale;
-  }
-
-  const normalizedLocale = locale.toLowerCase();
-
-  if (normalizedLocale === "pt" || normalizedLocale === "pt-br") {
-    return "pt-BR";
-  }
-
-  if (normalizedLocale.startsWith("en")) {
-    return "en";
-  }
-
-  return defaultLocale;
-};
-
-export const isSupportedLocale = locale =>
-  Object.prototype.hasOwnProperty.call(
-    localizedPortfolio,
-    normalizeLocale(locale)
-  );
 
 export const getPortfolioData = locale => {
   const activeLocale = normalizeLocale(locale);
@@ -184,6 +145,9 @@ export const getPortfolioData = locale => {
     openSource,
     twitterDetails,
     isHireable,
+    resume: {
+      fileName: getResumeFileName(activeLocale)
+    },
     ...localizedData
   };
 };
