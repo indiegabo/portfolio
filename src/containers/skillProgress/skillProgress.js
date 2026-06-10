@@ -1,17 +1,21 @@
 import React from "react";
 import "./Progress.scss";
-import {illustration, techStack} from "../../portfolio";
 import {Fade} from "react-reveal";
 import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
 export default function StackProgress() {
+  const {
+    portfolio: {illustration, techStack, ui}
+  } = usePortfolio();
+
   if (techStack.viewSkillBars) {
     return (
       <Fade bottom duration={1000} distance="20px">
         <div className="skills-container">
           <div className="skills-bar">
-            <h1 className="skills-heading">Proficiency</h1>
+            <h1 className="skills-heading">{ui.sections.proficiency}</h1>
             {techStack.experience.map((exp, i) => {
               const progressStyle = {
                 width: exp.progressPercentage
@@ -32,7 +36,7 @@ export default function StackProgress() {
               <DisplayLottie animationData={Build} />
             ) : (
               <img
-                alt="Skills"
+                alt={ui.sections.proficiency}
                 src={require("../../assets/images/skill.svg")}
               />
             )}

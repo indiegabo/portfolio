@@ -1,0 +1,333 @@
+{
+  "pageMetadata": {
+    "lang": "en",
+    "title": "IndieGabo | Game Developer",
+    "description": "Portfolio of IndieGabo featuring games, tools, assets, talks and professional experience in Unity, C# and multiplayer systems."
+  },
+  "ui": {
+    "nav": {
+      "skills": "Skills",
+      "experience": "Experience",
+      "openSource": "Open Source",
+      "achievements": "Achievements",
+      "blogs": "Blogs",
+      "talks": "Talks",
+      "contact": "Contact"
+    },
+    "hero": {
+      "contactButton": "Contact me",
+      "resumeButton": "See my resume"
+    },
+    "sections": {
+      "experience": "Experience",
+      "education": "Education",
+      "proficiency": "Proficiency",
+      "openSourceProjects": "Open Source Projects",
+      "moreProjects": "More Projects"
+    },
+    "githubProfile": {
+      "title": "Reach out to me!",
+      "openForOpportunities": "Open for opportunities",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "talks": {
+      "slides": "Slides",
+      "event": "Event"
+    },
+    "footer": {
+      "originalMadeWith": "Originally made with ❤️ by DeveloperFolio Team",
+      "themeBy": "Theme by",
+      "editedBy": "Edited by IndieGabo"
+    },
+    "controls": {
+      "languageSwitcher": "Select language",
+      "themeToggle": "Toggle theme"
+    },
+    "topButtonTitle": "Go to top"
+  },
+  "githubContent": {
+    "bio": "Hey! I am a game and assets developer using Unity and C#.",
+    "repoDescriptions": {
+      "sprite-animations": "A smooth and intuitive way to work with sprite sheets in Unity.",
+      "handy-fsm": "A handy finite state machine solution for Unity.",
+      "ctrl-alt-boo": "My contribution to the project.",
+      "parallax-tutorial": "Repository for the parallax tutorial.",
+      "ryzen-sandbox": "A 2D platformer sandbox created to study and test Unity's 2D feature set."
+    }
+  },
+  "greeting": {
+    "username": "IndieGabo",
+    "title": "Hey, I'm Gabo!",
+    "subTitle": "An indie games and assets developer, streamer and speaker from Brazil 🇧🇷.",
+    "resumeLink": "",
+    "displayGreeting": true
+  },
+  "skillsSection": {
+    "title": "What I do",
+    "subTitle": "I build games in C# with Unity. I specialize in 2D, but I am comfortable taking on projects of any shape or scale.",
+    "skills": [
+      "⚡ 2D and 3D games.",
+      "⚡ Custom editor windows and tooling with UI Toolkit.",
+      "⚡ Composition-oriented programming focused on scalable systems.",
+      "⚡ My web development background helps a lot when building multiplayer experiences."
+    ],
+    "softwareSkills": [
+      {
+        "skillName": "Unity",
+        "fontAwesomeClassname": "fab fa-unity"
+      },
+      {
+        "skillName": "C#",
+        "fontAwesomeClassname": "fas fa-code"
+      },
+      {
+        "skillName": "JavaScript",
+        "fontAwesomeClassname": "fab fa-js"
+      },
+      {
+        "skillName": "NodeJS",
+        "fontAwesomeClassname": "fab fa-node"
+      },
+      {
+        "skillName": "PHP",
+        "fontAwesomeClassname": "fab fa-php"
+      },
+      {
+        "skillName": "html-5",
+        "fontAwesomeClassname": "fab fa-html5"
+      },
+      {
+        "skillName": "css3",
+        "fontAwesomeClassname": "fab fa-css3-alt"
+      },
+      {
+        "skillName": "Databases",
+        "fontAwesomeClassname": "fas fa-database"
+      },
+      {
+        "skillName": "docker",
+        "fontAwesomeClassname": "fab fa-docker"
+      }
+    ],
+    "display": true
+  },
+  "educationInfo": {
+    "display": true,
+    "schools": [
+      {
+        "schoolName": "Universidade Salvador",
+        "logoKey": "unifacs",
+        "subHeader": "Technologist in Internet Applied Systems",
+        "duration": "January 2011 - December 2013",
+        "desc": "I graduated as a systems analyst focused on internet-based solutions.",
+        "descBullets": [
+          "Object-oriented programming",
+          "Databases",
+          "Web development",
+          "Computer architecture"
+        ]
+      }
+    ]
+  },
+  "techStack": {
+    "viewSkillBars": true,
+    "experience": [
+      {
+        "Stack": "Unity",
+        "progressPercentage": "95%"
+      },
+      {
+        "Stack": "C#",
+        "progressPercentage": "90%"
+      },
+      {
+        "Stack": "Backend APIs",
+        "progressPercentage": "70%"
+      }
+    ],
+    "displayCodersrank": false
+  },
+  "workExperiences": {
+    "display": true,
+    "experience": [
+      {
+        "role": "Lead Network Developer",
+        "company": "Estante Magica",
+        "companyLogoKey": "estanteMagica",
+        "date": "November 2023 - Present",
+        "desc": "Part-time work on the Magic Land mobile game.",
+        "descBullets": [
+          "Responsible for establishing the multiplayer networking layer",
+          "Responsible for the C# HTTP requests flow and structure",
+          "Acts as the glue between Unity and the backend"
+        ]
+      },
+      {
+        "role": "Lead Developer / Game Designer",
+        "company": "No Slopes",
+        "companyLogoKey": "noSlopes",
+        "date": "December 2021 - Present",
+        "desc": "Responsible for the tooling and features behind the games built by the studio."
+      }
+    ]
+  },
+  "bigProjects": {
+    "title": "Games I have worked on",
+    "subtitle": "A selection of games where I contributed as a developer or game designer.",
+    "projects": [
+      {
+        "imageKey": "magicLand",
+        "projectName": "Magic Land",
+        "projectDesc": "A mobile game made in Unity by the Estante Magica team. I am currently part of the development team, and it is the most robust game project I have worked on so far.",
+        "footerLink": [
+          {
+            "name": "Check it out",
+            "url": "https://play.google.com/store/apps/details?id=com.EstanteMagica.MagicLand"
+          }
+        ]
+      },
+      {
+        "imageKey": "chasingIllusions",
+        "projectName": "Chasing Illusions",
+        "projectDesc": "A Unity game jam project built around the theme \"Illusions\". We had the pleasure of winning the jam with this submission.",
+        "footerLink": [
+          {
+            "name": "Play it",
+            "url": "https://no-slopes.itch.io/chasing-illusions"
+          }
+        ]
+      },
+      {
+        "imageKey": "boomBoomCastle",
+        "projectName": "Boom Boom Castle",
+        "projectDesc": "A Unity game jam project built around the theme \"Collateral Effect\". Winner in the best theme fit category.",
+        "footerLink": [
+          {
+            "name": "Play it",
+            "url": "https://alternative-control.itch.io/boom-boom-castle"
+          }
+        ]
+      }
+    ],
+    "display": true
+  },
+  "assetsProjects": {
+    "title": "Assets I have created",
+    "subtitle": "Tools and assets I built for the community.",
+    "projects": [
+      {
+        "imageKey": "spriteAnimations",
+        "projectName": "Sprite Animations",
+        "projectDesc": "A smooth and intuitive way to work with sprite sheets in Unity. Free and open source.",
+        "footerLink": [
+          {
+            "name": "Check it out",
+            "url": "https://no-slopes.github.io/sprite-animations/"
+          }
+        ]
+      }
+    ],
+    "display": true
+  },
+  "achievementSection": {
+    "title": "Achievements and Certifications 🏆",
+    "subtitle": "Achievements, certifications, award letters and other milestones.",
+    "achievementsCards": [
+      {
+        "title": "Google Code-In Finalist",
+        "subtitle": "First Pakistani selected as a Google Code-In finalist among 4000 students from 77 different countries.",
+        "imageKey": "codeIn",
+        "imageAlt": "Google Code-In Logo",
+        "footerLink": [
+          {
+            "name": "Certification",
+            "url": "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+          },
+          {
+            "name": "Award letter",
+            "url": "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+          },
+          {
+            "name": "Google Code-In blog",
+            "url": "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          }
+        ]
+      },
+      {
+        "title": "Google Assistant Action",
+        "subtitle": "Developed a Google Assistant Action called JavaScript Guru, available on billions of devices worldwide.",
+        "imageKey": "googleAssistant",
+        "imageAlt": "Google Assistant Action Logo",
+        "footerLink": [
+          {
+            "name": "View Google Assistant Action",
+            "url": "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+          }
+        ]
+      },
+      {
+        "title": "PWA Web App Developer",
+        "subtitle": "Completed certification from SMIT for PWA web app development.",
+        "imageKey": "pwa",
+        "imageAlt": "PWA Logo",
+        "footerLink": [
+          {
+            "name": "Certification",
+            "url": ""
+          },
+          {
+            "name": "Final project",
+            "url": "https://pakistan-olx-1.firebaseapp.com/"
+          }
+        ]
+      }
+    ],
+    "display": false
+  },
+  "blogSection": {
+    "title": "Blogs",
+    "subtitle": "I enjoy writing about development and sharing what I learn along the way.",
+    "displayMediumBlogs": false,
+    "blogs": [
+      {
+        "url": "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
+        "title": "Win a Google Assistant T-shirt and $200 in Google Cloud Credits",
+        "description": "Do you want to win $200 and a Google Assistant T-shirt by creating a Google Assistant Action in less than 30 minutes?"
+      },
+      {
+        "url": "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
+        "title": "Why React Is the Best?",
+        "description": "React is a JavaScript library for building user interfaces, maintained by Facebook and a wide community of developers and companies."
+      }
+    ],
+    "display": false
+  },
+  "talkSection": {
+    "title": "Talks",
+    "subtitle": "I love to share what I know and keep learning in public 😅",
+    "talks": [
+      {
+        "title": "Build Actions for Google Assistant",
+        "subtitle": "Codelab at GDG DevFest Karachi 2019",
+        "slides_url": "https://bit.ly/saadpasta-slides",
+        "event_url": "https://www.facebook.com/events/2339906106275053/"
+      }
+    ],
+    "display": false
+  },
+  "podcastSection": {
+    "title": "Podcast 🎙️",
+    "subtitle": "I love talking about technology and the work behind it.",
+    "podcast": [
+      "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
+    ],
+    "display": false
+  },
+  "contactInfo": {
+    "title": "Contact Me ☎️",
+    "subtitle": "Want to discuss a project or just say hi? My inbox is open.",
+    "number": "+55-71991469251",
+    "email_address": "indiegabodev@gmail.com"
+  }
+}

@@ -1,17 +1,20 @@
-import React, { useContext } from "react";
-import { Fade } from "react-reveal";
+import React, {useContext} from "react";
+import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 // import landingPerson from "../../assets/lottie/landingPerson";
 // import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-
-import { greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
 export default function Greeting() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {greeting, ui}
+  } = usePortfolio();
+
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -39,10 +42,10 @@ export default function Greeting() {
               </p>
               <SocialMedia />
               <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
+                <Button text={ui.hero.contactButton} href="#contact" />
                 {greeting.resumeLink && (
                   <Button
-                    text="See my resume"
+                    text={ui.hero.resumeButton}
                     newTab={true}
                     href={greeting.resumeLink}
                   />
@@ -52,7 +55,7 @@ export default function Greeting() {
           </div>
           <div className="greeting-image-div">
             <img
-              alt="man sitting on table"
+              alt={greeting.username}
               src={require("../../assets/images/gabo.png")}
             ></img>
           </div>

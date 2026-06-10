@@ -1,12 +1,18 @@
 import React, {useState, useEffect, useContext} from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
-import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../hooks/usePortfolio";
+import {getPublicUrl} from "../../utils";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {blogSection}
+  } = usePortfolio();
   const [mediumBlogs, setMediumBlogs] = useState([]);
+  const [hasMediumFetchFailed, setHasMediumFetchFailed] = useState(false);
+
   function setMediumBlogsFunction(array) {
     setMediumBlogs(array);
   }
@@ -21,9 +27,9 @@ export default function Blogs() {
       : NaN;
   }
   useEffect(() => {
-    if (blogSection.displayMediumBlogs === "true") {
+    if (blogSection.displayMediumBlogs) {
       const getProfileData = () => {
-        fetch("/blogs.json")
+        fetch(getPublicUrl("/blogs.json"))
           .then(result => {
             if (result.ok) {
               return result.json();
@@ -36,13 +42,12 @@ export default function Blogs() {
             console.error(
               `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
             );
-            setMediumBlogsFunction("Error");
-            blogSection.displayMediumBlogs = "false";
+            setHasMediumFetchFailed(true);
           });
       };
       getProfileData();
     }
-  }, []);
+  }, [blogSection.displayMediumBlogs]);
   if (!blogSection.display) {
     return null;
   }
@@ -61,8 +66,7 @@ export default function Blogs() {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {blogSection.displayMediumBlogs !== "true" ||
-            mediumBlogs === "Error"
+            {!blogSection.displayMediumBlogs || hasMediumFetchFailed
               ? blogSection.blogs.map((blog, i) => {
                   return (
                     <BlogCard

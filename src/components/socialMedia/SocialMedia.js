@@ -1,8 +1,12 @@
 import React from "react";
 import "./SocialMedia.scss";
-import { socialMediaLinks } from "../../portfolio";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
-export default function socialMedia() {
+export default function SocialMedia() {
+  const {
+    portfolio: {socialMediaLinks}
+  } = usePortfolio();
+
   if (!socialMediaLinks.display) {
     return null;
   }

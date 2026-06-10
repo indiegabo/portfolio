@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import "./StartupProjects.scss";
-import { assetsProjects } from "../../portfolio";
-import { Fade } from "react-reveal";
+import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
 export default function AssetProject() {
   function openUrlInNewTab(url) {
@@ -13,7 +13,11 @@ export default function AssetProject() {
     win.focus();
   }
 
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {assetsProjects}
+  } = usePortfolio();
+
   if (!assetsProjects.display) {
     return null;
   }

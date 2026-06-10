@@ -1,14 +1,18 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import { illustration, skillsSection } from "../../portfolio";
-import { Fade } from "react-reveal";
+import {Fade} from "react-reveal";
 import whatIDo from "../../assets/lottie/whatIDo";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
 export default function Skills() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {illustration, skillsSection}
+  } = usePortfolio();
+
   if (!skillsSection.display) {
     return null;
   }
@@ -21,7 +25,7 @@ export default function Skills() {
               <DisplayLottie animationData={whatIDo} loop={false} />
             ) : (
               <img
-                alt="Man Working"
+                alt={skillsSection.title}
                 src={require("../../assets/images/gabo.png")}
               ></img>
             )}

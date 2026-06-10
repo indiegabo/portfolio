@@ -1,0 +1,333 @@
+{
+    "pageMetadata": {
+        "lang": "pt-BR",
+        "title": "IndieGabo | Desenvolvedor de Jogos",
+        "description": "Portfólio do IndieGabo com jogos, ferramentas, assets, palestras e experiência profissional em Unity, C# e sistemas multiplayer."
+    },
+    "ui": {
+        "nav": {
+            "skills": "Habilidades",
+            "experience": "Experiência",
+            "openSource": "Open Source",
+            "achievements": "Conquistas",
+            "blogs": "Blogs",
+            "talks": "Palestras",
+            "contact": "Contato"
+        },
+        "hero": {
+            "contactButton": "Fale comigo",
+            "resumeButton": "Ver currículo"
+        },
+        "sections": {
+            "experience": "Experiência",
+            "education": "Educação",
+            "proficiency": "Proficiência",
+            "openSourceProjects": "Projetos open source",
+            "moreProjects": "Mais projetos"
+        },
+        "githubProfile": {
+            "title": "Fale comigo!",
+            "openForOpportunities": "Aberto a oportunidades",
+            "yes": "Sim",
+            "no": "Não"
+        },
+        "talks": {
+            "slides": "Slides",
+            "event": "Evento"
+        },
+        "footer": {
+            "originalMadeWith": "Originalmente feito com ❤️ pela equipe do DeveloperFolio",
+            "themeBy": "Tema por",
+            "editedBy": "Editado por IndieGabo"
+        },
+        "controls": {
+            "languageSwitcher": "Selecionar idioma",
+            "themeToggle": "Alternar tema"
+        },
+        "topButtonTitle": "Voltar ao topo"
+    },
+    "githubContent": {
+        "bio": "Oi! Eu sou um desenvolvedor de jogos e assets usando Unity e C#.",
+        "repoDescriptions": {
+            "sprite-animations": "Uma forma fluida e intuitiva de trabalhar com sprite sheets na Unity.",
+            "handy-fsm": "Uma solução prática de máquina de estados finitos para Unity.",
+            "ctrl-alt-boo": "Minha contribuição para o projeto.",
+            "parallax-tutorial": "Repositório do tutorial sobre parallax.",
+            "ryzen-sandbox": "Um sandbox de plataforma 2D criado para estudar e testar os recursos 2D da Unity."
+        }
+    },
+    "greeting": {
+        "username": "IndieGabo",
+        "title": "Oi, eu sou Gabo!",
+        "subTitle": "Desenvolvedor indie de jogos e assets, streamer e falador do Brasil 🇧🇷.",
+        "resumeLink": "",
+        "displayGreeting": true
+    },
+    "skillsSection": {
+        "title": "O que eu faço",
+        "subTitle": "Eu desenvolvo jogos em C# com Unity. Sou especializado em 2D, mas fico confortável encarando projetos de qualquer formato ou escala.",
+        "skills": [
+            "⚡ Jogos 2D e 3D.",
+            "⚡ Ferramentas e janelas de editor customizadas com UI Toolkit.",
+            "⚡ Programação orientada a composição com foco em sistemas escaláveis.",
+            "⚡ Minha base em desenvolvimento web ajuda bastante quando estou construindo experiências multiplayer."
+        ],
+        "softwareSkills": [
+            {
+                "skillName": "Unity",
+                "fontAwesomeClassname": "fab fa-unity"
+            },
+            {
+                "skillName": "C#",
+                "fontAwesomeClassname": "fas fa-code"
+            },
+            {
+                "skillName": "JavaScript",
+                "fontAwesomeClassname": "fab fa-js"
+            },
+            {
+                "skillName": "NodeJS",
+                "fontAwesomeClassname": "fab fa-node"
+            },
+            {
+                "skillName": "PHP",
+                "fontAwesomeClassname": "fab fa-php"
+            },
+            {
+                "skillName": "html-5",
+                "fontAwesomeClassname": "fab fa-html5"
+            },
+            {
+                "skillName": "css3",
+                "fontAwesomeClassname": "fab fa-css3-alt"
+            },
+            {
+                "skillName": "Bancos de dados",
+                "fontAwesomeClassname": "fas fa-database"
+            },
+            {
+                "skillName": "docker",
+                "fontAwesomeClassname": "fab fa-docker"
+            }
+        ],
+        "display": true
+    },
+    "educationInfo": {
+        "display": true,
+        "schools": [
+            {
+                "schoolName": "Universidade Salvador",
+                "logoKey": "unifacs",
+                "subHeader": "Tecnólogo em Sistemas Aplicados à Internet",
+                "duration": "Janeiro de 2011 - Dezembro de 2013",
+                "desc": "Me formei como analista de sistemas com foco em soluções aplicadas à internet.",
+                "descBullets": [
+                    "Programação orientada a objetos",
+                    "Bancos de dados",
+                    "Desenvolvimento web",
+                    "Arquitetura de computadores"
+                ]
+            }
+        ]
+    },
+    "techStack": {
+        "viewSkillBars": true,
+        "experience": [
+            {
+                "Stack": "Unity",
+                "progressPercentage": "95%"
+            },
+            {
+                "Stack": "C#",
+                "progressPercentage": "90%"
+            },
+            {
+                "Stack": "Back-end e APIs",
+                "progressPercentage": "70%"
+            }
+        ],
+        "displayCodersrank": false
+    },
+    "workExperiences": {
+        "display": true,
+        "experience": [
+            {
+                "role": "Líder de Networking Development",
+                "company": "Estante Mágica",
+                "companyLogoKey": "estanteMagica",
+                "date": "Novembro de 2023 - Novembro de 2024",
+                "desc": "Jornada em meio período desenvolvendo o jogo mobile Magic Land.",
+                "descBullets": [
+                    "Responsável por estruturar a camada de rede multiplayer",
+                    "Responsável pelo fluxo e pela estrutura de requisições HTTP em C#",
+                    "Atua como a cola entre Unity e o back-end"
+                ]
+            },
+            {
+                "role": "Líder de Desenvolvimento / Game Designer",
+                "company": "No Slopes",
+                "companyLogoKey": "noSlopes",
+                "date": "Dezembro de 2021 - Atual",
+                "desc": "Responsável pelas ferramentas e funcionalidades por trás dos jogos desenvolvidos pelo estúdio."
+            }
+        ]
+    },
+    "bigProjects": {
+        "title": "Jogos em que trabalhei",
+        "subtitle": "Uma seleção de jogos dos quais participei como desenvolvedor ou game designer.",
+        "projects": [
+            {
+                "imageKey": "magicLand",
+                "projectName": "Magic Land",
+                "projectDesc": "Um jogo mobile feito em Unity pela equipe da Estante Mágica. Atualmente faço parte do time de desenvolvimento, e este é o projeto de jogo mais robusto em que trabalhei até agora.",
+                "footerLink": [
+                    {
+                        "name": "Confira",
+                        "url": "https://play.google.com/store/apps/details?id=com.EstanteMagica.MagicLand"
+                    }
+                ]
+            },
+            {
+                "imageKey": "chasingIllusions",
+                "projectName": "Chasing Illusions",
+                "projectDesc": "Um projeto de game jam feito em Unity sob o tema \"Illusions\". Tivemos o prazer de vencer a jam com essa submissão.",
+                "footerLink": [
+                    {
+                        "name": "Jogue",
+                        "url": "https://no-slopes.itch.io/chasing-illusions"
+                    }
+                ]
+            },
+            {
+                "imageKey": "boomBoomCastle",
+                "projectName": "Boom Boom Castle",
+                "projectDesc": "Um projeto de game jam feito em Unity sob o tema \"Collateral Effect\". Vencedor na categoria de melhor aderência ao tema.",
+                "footerLink": [
+                    {
+                        "name": "Jogue",
+                        "url": "https://alternative-control.itch.io/boom-boom-castle"
+                    }
+                ]
+            }
+        ],
+        "display": true
+    },
+    "assetsProjects": {
+        "title": "Assets que criei",
+        "subtitle": "Ferramentas e assets que desenvolvi para a comunidade.",
+        "projects": [
+            {
+                "imageKey": "spriteAnimations",
+                "projectName": "Sprite Animations",
+                "projectDesc": "Uma forma fluida e intuitiva de trabalhar com sprite sheets na Unity. Gratuito e open source.",
+                "footerLink": [
+                    {
+                        "name": "Confira",
+                        "url": "https://no-slopes.github.io/sprite-animations/"
+                    }
+                ]
+            }
+        ],
+        "display": true
+    },
+    "achievementSection": {
+        "title": "Conquistas e certificações 🏆",
+        "subtitle": "Conquistas, certificações, cartas de premiação e outros marcos.",
+        "achievementsCards": [
+            {
+                "title": "Google Code-In Finalist",
+                "subtitle": "Primeiro paquistanês selecionado como finalista do Google Code-In entre 4000 estudantes de 77 países diferentes.",
+                "imageKey": "codeIn",
+                "imageAlt": "Google Code-In Logo",
+                "footerLink": [
+                    {
+                        "name": "Certificação",
+                        "url": "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+                    },
+                    {
+                        "name": "Carta de premiação",
+                        "url": "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+                    },
+                    {
+                        "name": "Blog do Google Code-In",
+                        "url": "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+                    }
+                ]
+            },
+            {
+                "title": "Google Assistant Action",
+                "subtitle": "Desenvolveu uma Google Assistant Action chamada JavaScript Guru, disponível em bilhões de dispositivos no mundo inteiro.",
+                "imageKey": "googleAssistant",
+                "imageAlt": "Google Assistant Action Logo",
+                "footerLink": [
+                    {
+                        "name": "Ver Google Assistant Action",
+                        "url": "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+                    }
+                ]
+            },
+            {
+                "title": "Desenvolvedor de PWA",
+                "subtitle": "Concluiu certificação do SMIT em desenvolvimento de PWA.",
+                "imageKey": "pwa",
+                "imageAlt": "PWA Logo",
+                "footerLink": [
+                    {
+                        "name": "Certificação",
+                        "url": ""
+                    },
+                    {
+                        "name": "Projeto final",
+                        "url": "https://pakistan-olx-1.firebaseapp.com/"
+                    }
+                ]
+            }
+        ],
+        "display": false
+    },
+    "blogSection": {
+        "title": "Blogs",
+        "subtitle": "Gosto de escrever sobre desenvolvimento e compartilhar o que vou aprendendo pelo caminho.",
+        "displayMediumBlogs": false,
+        "blogs": [
+            {
+                "url": "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
+                "title": "Win a Google Assistant T-shirt and $200 in Google Cloud Credits",
+                "description": "Quer ganhar $200 e uma camiseta do Google Assistant criando uma Google Assistant Action em menos de 30 minutos?"
+            },
+            {
+                "url": "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
+                "title": "Why React Is the Best?",
+                "description": "React é uma biblioteca JavaScript para construir interfaces, mantida pelo Facebook e por uma comunidade ampla de desenvolvedores e empresas."
+            }
+        ],
+        "display": false
+    },
+    "talkSection": {
+        "title": "Palestras",
+        "subtitle": "Eu gosto de compartilhar o que sei e continuar aprendendo em público 😅",
+        "talks": [
+            {
+                "title": "Build Actions for Google Assistant",
+                "subtitle": "Codelab no GDG DevFest Karachi 2019",
+                "slides_url": "https://bit.ly/saadpasta-slides",
+                "event_url": "https://www.facebook.com/events/2339906106275053/"
+            }
+        ],
+        "display": false
+    },
+    "podcastSection": {
+        "title": "Podcast 🎙️",
+        "subtitle": "Eu adoro conversar sobre tecnologia e o trabalho por trás dela.",
+        "podcast": [
+            "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
+        ],
+        "display": false
+    },
+    "contactInfo": {
+        "title": "Entre em contato ☎️",
+        "subtitle": "Quer conversar sobre um projeto ou só dizer oi? Minha caixa de entrada está aberta.",
+        "number": "+55-71991469251",
+        "email_address": "indiegabodev@gmail.com"
+    }
+}

@@ -45,27 +45,71 @@
   text-decoration: none;
 }
 
+.header-control-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-toggle-item {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $textColor;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.language-switcher-label {
+  color: $subTitle;
+}
+
+.language-select {
+  appearance: none;
+  border: 1px solid $lightBorder1;
+  border-radius: 999px;
+  background-color: $lightBackground1;
+  color: $textColor;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.language-select.dark-mode {
+  background-color: $darkBackground;
+  color: $textColorDark;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: $headerHoverBG;
 }
 
 .header .logo {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: none;
-  float: left;
   font-size: 1.5em;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 0;
+  padding: 10px 0;
   line-height: normal;
 }
 
-.header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
-  font-variant-ligatures: no-common-ligatures;
-  -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 10px;
+.header .logo-image {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 /* menu */
@@ -137,7 +181,7 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 486px;
+  max-height: 640px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -174,9 +218,25 @@
   .header .menu-icon {
     display: none;
   }
+
+  .header-control-item {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 @media (max-width: 960px) and (min-width: 768px) {
   .header {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-control-item {
+    justify-content: flex-start;
+  }
+
+  .language-switcher {
+    width: 100%;
+    justify-content: space-between;
   }
 }

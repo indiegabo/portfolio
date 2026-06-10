@@ -1,12 +1,16 @@
 import React, {useContext} from "react";
 import "./Talks.scss";
 import TalkCard from "../../components/talkCard/TalkCard";
-import {talkSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
 export default function Talks() {
   const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {talkSection, ui}
+  } = usePortfolio();
+
   if (!talkSection.display) {
     return null;
   }
@@ -33,6 +37,8 @@ export default function Talks() {
                   subtitle: talk.subtitle,
                   slides_url: talk.slides_url,
                   event_url: talk.event_url,
+                  slidesLabel: ui.talks.slides,
+                  eventLabel: ui.talks.event,
                   image: talk.image,
                   isDark
                 }}

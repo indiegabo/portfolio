@@ -2,8 +2,8 @@ import React, {Suspense, useContext} from "react";
 import "./twitter.scss";
 import Loading from "../loading/Loading";
 import {TwitterTimelineEmbed} from "react-twitter-embed";
-import {twitterDetails} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {usePortfolio} from "../../hooks/usePortfolio";
 
 const renderLoader = () => <Loading />;
 const cantDisplayError =
@@ -20,6 +20,9 @@ var widthScreen = window.screen.width;
 
 export default function Twitter() {
   const {isDark} = useContext(StyleContext);
+  const {
+    portfolio: {twitterDetails}
+  } = usePortfolio();
 
   if (!twitterDetails.display) {
     return null;
